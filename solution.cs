@@ -1,7 +1,6 @@
-class TreeNode {
-    constructor(val, left = null, right = null) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
+class Codec {
+    serialize(root) {
+        if (!root) return 'null';
+        return `${root.val},${this.serialize(root.left)},${this.serialize(root.right)}`;
     }
 }
